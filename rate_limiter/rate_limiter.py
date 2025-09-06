@@ -102,7 +102,7 @@ class FixedWindowRateLimiter(RateLimiter):
         curr_time = int(time.time())
         
         # Check if we need to start a new window
-        if curr_time > self.window_start_time + self.window_size:
+        if curr_time > self.window_end_time:
             # Current time has exceeded the window boundary
             # Create a new window aligned to the window_size boundary
             self.window_start_time = curr_time - (curr_time % self.window_size)
