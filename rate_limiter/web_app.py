@@ -1,12 +1,11 @@
 import random
 from flask import Flask, request, jsonify
-from rate_limiter import FixedWindowRateLimiter
-
 import nltk
 nltk.download("words")
-
 from nltk.corpus import words
 word_list = words.words()
+
+from rate_limiter import FixedWindowRateLimiter
 
 MAX_REQUESTS = 5
 WINDOW_SIZE = 10
