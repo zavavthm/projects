@@ -1,0 +1,25 @@
+=== Purchase Prediction Model — Evaluation Report ===
+
+MLflow Run ID: f77ec1a6dd4e4e8c8fa92a6fd7dd069c
+Model: XGBoost ({'n_estimators': 200, 'max_depth': 5, 'learning_rate': 0.1, 'subsample': 0.8, 'colsample_bytree': 0.8, 'eval_metric': 'logloss', 'random_state': 42})
+Train size: 1800 | Test size: 200
+Features: 31
+
+Accuracy:  0.9150
+Precision: 0.9150
+Recall:    1.0000
+F1 Score:  0.9556
+AUC-ROC:   0.6953
+
+Confusion Matrix:
+  TN=0  FP=17
+  FN=0  TP=183
+
+              precision    recall  f1-score   support
+
+ No Purchase       0.00      0.00      0.00        17
+    Purchase       0.92      1.00      0.96       183
+
+    accuracy                           0.92       200
+   macro avg       0.46      0.50      0.48       200
+weighted avg       0.84      0.92      0.87       200

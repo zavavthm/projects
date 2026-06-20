@@ -1,0 +1,26 @@
+artifact_path: /Users/manik.malhotra/Downloads/P/git_projects/projects/ml-in-production/mlflow/mlartifacts/1/models/m-68bd76c4635a4711878895d02d6c8c7c/artifacts
+flavors:
+  python_function:
+    artifacts:
+      feature_columns:
+        path: artifacts/feature_columns.json
+        uri: /Users/manik.malhotra/Downloads/P/git_projects/projects/ml-in-production/model-training/models/feature_columns.json
+      xgb_model:
+        path: artifacts/xgb_purchase_model.json
+        uri: /Users/manik.malhotra/Downloads/P/git_projects/projects/ml-in-production/model-training/models/xgb_purchase_model.json
+    cloudpickle_version: 3.1.2
+    code: null
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.pyfunc.model
+    python_model: python_model.pkl
+    python_version: 3.13.5
+    streamable: false
+mlflow_version: 3.13.0
+model_id: m-68bd76c4635a4711878895d02d6c8c7c
+model_size_bytes: 483212
+model_uuid: m-68bd76c4635a4711878895d02d6c8c7c
+prompts: null
+run_id: 7d4e491e53984a66b0d4b89ac2d2cf78
+utc_time_created: '2026-06-20 17:11:02.163737'

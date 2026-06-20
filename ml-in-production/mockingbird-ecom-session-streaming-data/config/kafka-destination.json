@@ -1,0 +1,9 @@
+{
+  "_comment": "Template for Confluent Cloud Kafka destination (if migrating from local to cloud)",
+  "destination": "confluent-cloud-kafka",
+  "restEndpoint": "https://<your-cluster>.confluent.cloud:443",
+  "clusterId": "<your-cluster-id>",
+  "topic": "ecom-sessions",
+  "apiKey": "<your-api-key>",
+  "apiSecret": "<your-api-secret>"
+}

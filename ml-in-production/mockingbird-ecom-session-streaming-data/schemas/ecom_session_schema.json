@@ -1,0 +1,117 @@
+{
+  "timestamp": {
+    "type": "mockingbird.timestampNow"
+  },
+  "event_id": {
+    "type": "mockingbird.pick",
+    "params": [{ "values": ["evt"] }],
+    "_note": "Generated dynamically as evt_XXXXX in producer"
+  },
+  "user_id": {
+    "type": "mockingbird.pick",
+    "params": [{ "values": ["user"] }],
+    "_note": "Generated dynamically as user_XXXX from a pool of 2000 users"
+  },
+  "event_type": {
+    "type": "mockingbird.pickWeighted",
+    "params": [{
+      "values": ["page_view", "search", "add_to_cart", "product_click", "remove_from_cart", "purchase", "apply_coupon", "write_review"],
+      "weights": [40, 15, 15, 15, 5, 5, 3, 2]
+    }]
+  },
+  "product_id": {
+    "type": "mockingbird.pick",
+    "params": [{ "values": ["prod"] }],
+    "_note": "Generated dynamically as prod_XXXX from a pool of 5000 products"
+  },
+  "product_category": {
+    "type": "mockingbird.pickWeighted",
+    "params": [{
+      "values": ["Electronics", "Clothing", "Home & Kitchen", "Books", "Sports", "Beauty", "Toys", "Grocery"],
+      "weights": [25, 20, 15, 12, 10, 8, 5, 5]
+    }]
+  },
+  "product_price": {
+    "type": "mockingbird.pick",
+    "params": [{
+      "values": [
+        4.99, 7.49, 9.99, 12.99, 14.99, 17.49, 19.99, 22.99, 24.99, 27.49,
+        29.99, 34.99, 39.99, 44.99, 49.99, 54.99, 59.99, 64.99, 69.99, 74.99,
+        79.99, 84.99, 89.99, 94.99, 99.99, 109.99, 119.99, 129.99, 139.99, 149.99,
+        159.99, 179.99, 199.99, 224.99, 249.99, 279.99, 299.99, 349.99, 399.99, 449.99,
+        499.99, 549.99, 599.99, 649.99, 699.99, 749.99, 799.99, 899.99, 999.99, 1099.99,
+        1199.99, 1299.99
+      ]
+    }]
+  },
+  "quantity": {
+    "type": "mockingbird.pickWeighted",
+    "params": [{
+      "values": [1, 2, 3, 4, 5],
+      "weights": [60, 25, 10, 3, 2]
+    }]
+  },
+  "device": {
+    "type": "mockingbird.pickWeighted",
+    "params": [{
+      "values": ["mobile", "desktop", "tablet"],
+      "weights": [55, 35, 10]
+    }]
+  },
+  "os": {
+    "type": "mockingbird.pickWeighted",
+    "params": [{
+      "values": ["iOS", "Android", "Windows", "macOS", "Linux"],
+      "weights": [35, 30, 20, 12, 3]
+    }]
+  },
+  "browser": {
+    "type": "mockingbird.pickWeighted",
+    "params": [{
+      "values": ["Chrome", "Safari", "Firefox", "Edge", "Other"],
+      "weights": [50, 25, 10, 10, 5]
+    }]
+  },
+  "referral_source": {
+    "type": "mockingbird.pickWeighted",
+    "params": [{
+      "values": ["direct", "google_search", "social_media", "email_campaign", "affiliate", "paid_ad"],
+      "weights": [30, 25, 15, 12, 10, 8]
+    }]
+  },
+  "page_duration_sec": {
+    "type": "mockingbird.pick",
+    "params": [{
+      "values": [
+        3, 5, 7, 10, 12, 15, 18, 22, 25, 30,
+        35, 40, 48, 55, 65, 75, 85, 100, 115, 130,
+        150, 175, 200, 230, 260, 300, 340, 380, 420, 470,
+        520, 560, 600
+      ]
+    }]
+  },
+  "is_member": {
+    "type": "mockingbird.pickWeighted",
+    "params": [{
+      "values": [true, false],
+      "weights": [40, 60]
+    }]
+  },
+  "cart_total": {
+    "type": "mockingbird.pick",
+    "params": [{
+      "values": [
+        0.00, 9.99, 19.99, 29.99, 39.99, 49.99, 64.99, 79.99, 99.99, 124.99,
+        149.99, 174.99, 199.99, 249.99, 299.99, 349.99, 399.99, 499.99, 599.99, 699.99,
+        799.99, 899.99, 999.99, 1199.99, 1499.99, 1799.99, 1999.99, 2249.99, 2499.99
+      ]
+    }]
+  },
+  "discount_pct": {
+    "type": "mockingbird.pickWeighted",
+    "params": [{
+      "values": [0, 5, 10, 15, 20, 25],
+      "weights": [55, 15, 12, 8, 6, 4]
+    }]
+  }
+}
